@@ -1,0 +1,31 @@
+h1 {
+    color: #FF7A00;
+    text-align: center;
+}
+
+table, th, td {
+
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+}
+caption {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 10px;
+    
+    color: #ff00ff;
+    text-align: center;
+    background-color: #ffff00;
+} 
+th
+{
+    background-color: #8c00ff;
+    color: white;
+}
+td
+{
+    background-color: #ff8c00;
+    color: rgb(255, 255, 255);
+}
