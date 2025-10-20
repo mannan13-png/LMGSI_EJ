@@ -1,0 +1,77 @@
+
+h1 {
+    color: #0015ff;
+    text-align: center;
+}
+
+table, th, td {
+     margin-left: auto;
+    margin-right: auto;
+    
+
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+}
+caption {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 10px;
+    
+    color: #fff200;
+    text-align: center;
+ 
+} 
+th
+{
+    background-color: #8c00ff;
+    color: white;
+   
+font-size: 20px;
+padding: 10px;
+Ample: 180px;
+}
+td
+{
+    background-color:  #ffffff;
+    color: rgb(0, 0, 0);
+}
+.LMGSI {
+    background-color: #7e1f0a;
+    color: #170101;
+}
+.SI {
+    background-color: #00ff04;
+    color: #003300;
+}   .Programació {
+    background-color: #ff9900;
+    color: #663300;
+}
+.BD {
+    background-color: #ffff00;
+    color: #666600;
+}.AN {
+    background-color: #00ffff;
+    color: #006666;
+}.IPOI {
+    background-color: #ff00ff;
+    color: #660066;
+}.SGE {
+    background-color: #ff0000;
+    color: #660000;
+}.TUT {
+    background-color: #999999;
+    color: #333333;
+}.Descans {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 15px;
+    font-size: 20px;
+
+}
+
+}
+
+
+}
