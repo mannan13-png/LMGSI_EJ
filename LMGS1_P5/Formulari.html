@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari ITIC</title>
+</head>
+<body>
+    <h1>Subscriu-te al noticiari ITIC Barcelona</h1>
+<h4>Primer, explica'ns qui ets</h4>
+<form action="/submit_form" method="post">
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="name">Nom i cognoms:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="age">Edat:</label><br>
+    <input type="number" id="age" name="age" min="0" required><br><br>
+
+    <h4>Quin cicle estàs estudiant?</h4>
+  <input type="radio" id="ASIX" name="fav_language" value="ASIX">
+  <label for="ASIX">ASIX</label><br>
+  <input type="radio" id="dam" name="fav_language" value="DAM">
+  <label for="dam">DAM</label><br>
+  <input type="radio" id="DAW" name="fav_language" value="DAW">
+  <label for="DAW">DAW</label><br>
+  
+
+    <br><br>
+    
+    <h4>Marca els termes que vulgius estar sempre al dia!</h4>
+    <input type="checkbox" id="Tem1" name="Tem1" value="IA">
+  <label for="vehicle1"> Intel·ligència artificial</label><br>
+    <input type="checkbox" id="Tem2" name="Tem2" value="Computació quàntica">
+    <label for="vehicle2"> Computació quàntica</label><br>
+    <input type="checkbox" id="Tem3" name="Tem3" value="supercomputadors">
+    <label for="vehicle3"> Supercomputadors</label><br>
+    <input type="checkbox" id="Tem4" name="Tem4" value="Recerca en algorismes">
+    <label for="vehicle4"> Recerca en algorismes</label><br>
+
+    <h4>Hi ha algun tema més t'interessi? Explica'ns-ho!</h4>
+    <textarea id="subject" name="subject" rows="4" cols="50" placeholder="També m'agradaria saber les ultimes novetats sobre..."></textarea><br><br>
+    <input type="submit" value="Subscriure'm!">
+</form>
