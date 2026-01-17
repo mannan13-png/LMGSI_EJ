@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cataleg_musica SYSTEM "cataleg_musica.dtd">
+<cataleg_musica>
+
+    <llista_artistes>
+        <artista id="a1">
+            <nom>Queen</nom>
+            <pais>Regne Unit</pais>
+            <genere>Rock</genere>
+        </artista>
+
+        <artista id="a2">
+            <nom>Daft Punk</nom>
+            <pais>França</pais>
+        </artista>
+
+        <artista id="a3">
+            <nom>Radiohead</nom>
+            <genere>Alternative</genere>
+        </artista>
+
+        <artista id="a4">
+            <nom>Coldplay</nom>
+        </artista>
+    </llista_artistes>
+
+    <llista_albumes>
+        <album id="al1">
+            <titol>A Night at the Opera</titol>
+            <any>1975</any>
+            <artistes>
+                <artista_ref ref="a1"/>
+            </artistes>
+        </album>
+
+        <album id="al2">
+            <titol>Discovery</titol>
+            <any>2001</any>
+            <artistes>
+                <artista_ref ref="a2"/>
+            </artistes>
+        </album>
+
+        <album id="al3">
+            <titol>OK Computer</titol>
+            <any>1997</any>
+            <artistes>
+                <artista_ref ref="a3"/>
+            </artistes>
+        </album>
+
+        <album id="al4">
+            <titol>Parachutes</titol>
+            <any>2000</any>
+            <artistes>
+                <artista_ref ref="a4"/>
+            </artistes>
+        </album>
+    </llista_albumes>
+
+
+    <llista_recomanacions_albumes>
+        <recomanacio ref="al1"/>
+        <recomanacio ref="al3"/>
+    </llista_recomanacions_albumes>
+
+</cataleg_musica>
