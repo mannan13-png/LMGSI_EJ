@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<botiga nom="TechStore" moneda="EUR">
+
+    <productes>
+
+        <producte codi="P001">
+            <nom>Portàtil Lenovo ThinkPad</nom>
+            <descripcio>Portàtil professional per a ús diari</descripcio>
+            <preu>899.99</preu>
+            <categoria>Informàtica</categoria>
+            <disponibilitat>en estoc</disponibilitat>
+            <imatge>https://www.exemple.com/imatges/thinkpad.jpg</imatge>
+        </producte>
+
+        <producte codi="P002">
+            <nom>Ratolí sense fils Logitech</nom>
+            <descripcio>Ratolí ergonòmic amb connexió Bluetooth</descripcio>
+            <preu>29.95</preu>
+            <categoria>Accessoris</categoria>
+            <disponibilitat>esgotat</disponibilitat>
+            <imatge>https://www.exemple.com/imatges/logitech-mouse.jpg</imatge>
+        </producte>
+
+    </productes>
+
+</botiga>
