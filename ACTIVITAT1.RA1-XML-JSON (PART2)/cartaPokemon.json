@@ -1,0 +1,72 @@
+{
+  "pokemons": [
+    {
+      "id": 1,
+      "nombre": "Bulbasaur",
+      "tipos": ["Planta", "Veneno"],
+      "peso": "6.9 kg",
+      "altura": "0.7 m",
+      "estadisticas": {
+        "velocidad": 45,
+        "fortaleza": 49,
+        "precision": 65,
+        "resistencia": 49
+      },
+      "movimientos": [
+        {
+          "nombre": "Placaje",
+          "descripcion": "Golpea al oponente con el cuerpo.",
+          "potencia": 40,
+          "contacto": true
+        },
+        {
+          "nombre": "Latigazo",
+          "descripcion": "Ataca con una cola larga y flexible.",
+          "potencia": 35,
+          "contacto": true
+        }
+      ],
+      "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+      "evoluciones": [
+        {
+          "id": 2,
+          "nivel": 16
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Ivysaur",
+      "tipos": ["Planta", "Veneno"],
+      "peso": "13.0 kg",
+      "altura": "1.0 m",
+      "estadisticas": {
+        "velocidad": 60,
+        "fortaleza": 62,
+        "precision": 80,
+        "resistencia": 63
+      },
+      "movimientos": [
+        {
+          "nombre": "Látigo Cepa",
+          "descripcion": "Ataque con un látigo de planta.",
+          "potencia": 45,
+          "contacto": true
+        },
+        {
+          "nombre": "Hoja Afilada",
+          "descripcion": "Lanza hojas afiladas al enemigo.",
+          "potencia": 55,
+          "contacto": false
+        }
+      ],
+      "imagen": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png",
+      "evoluciones": [
+        {
+          "id": 3,
+          "nivel": 32
+        }
+      ]
+    }
+  ]
+}
