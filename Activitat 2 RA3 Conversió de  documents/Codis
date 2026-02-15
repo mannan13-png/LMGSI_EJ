@@ -1,0 +1,303 @@
+
+--CODI1 
+<html>
+    <head></head>
+    <body>
+        <p id ="parragraf">hola</p>
+        <button onclick="modifyP()">canviar p</button>
+        <script>           
+            //aqui el nostre codi
+            //declarar variables necesaries amb let i buscar al DOM el parragraf que modificarem
+           let parragraf = document.getElementById("parragraf");
+            function modifyP()
+            {
+                parragraf.textContent = "adeu";
+            }
+
+
+        </script>
+    </body>
+</html>
+
+--CODI2
+<html>
+    <head>
+        <style>
+            /* Classes CSS */
+            .destacat {
+                background-color: yellow;
+                font-weight: bold;
+            }
+
+            .amagat {
+                display: none;
+            }
+
+            .vermell {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="text">Aquest text canviarà amb classList</p>
+
+        <button onclick="toggleDestacat()">Destacat</button>
+        <button onclick="toggleVermell()">Vermell</button>
+        <button onclick="toggleAmagat()">Mostrar / Amagar</button>
+
+        <script>
+            // Aquí el nostre codi
+            // En aquesta activitat HAS d'utilitzar classList (add, remove, toggle o contains)
+
+            let text = document.getElementById("text");
+
+            function toggleDestacat()
+            {
+                text.classList.toggle("destacat");
+            }
+
+            function toggleVermell()
+            {
+                text.classList.toggle("vermell");
+            }
+
+            function toggleAmagat()
+            {
+                text.classList.toggle("amagat");
+            }
+        </script>
+    </body>
+</html>
+
+--CODI3
+<html>
+    <head></head>
+    <body>
+        <input id="input">
+        
+        <button onclick="converteix()">Convertir a mayusculas</button>
+        <p id="resultat">Resultat</p>
+
+        <script>
+            // Aquí el nostre codi
+            let input = document.getElementById("input");
+            let resultat = document.getElementById("resultat");
+            function converteix(){
+                resultat.textContent = input.value.toUpperCase();
+            }
+           
+        </script>
+    </body>
+</html>
+
+--CODI4
+<html>
+    <head></head>
+    <body>
+        <input id="num1">
+        <input id="num2">
+        <button onclick="resta()">Resta</button>
+        <p id="resultat">Resultat</p>
+
+        <script>
+            // Aquí el nostre codi
+            // Declarar les variables necessàries amb let i buscar al DOM els elements que farem servir
+
+            let n1 = document.getElementById("num1");
+            let n2 = document.getElementById("num2");
+            let resultat = document.getElementById("resultat");
+
+            function resta()
+            {
+                let num = Number(n1.value) - Number(n2.value);
+                resultat.textContent = num;
+            }
+        </script>
+    </body>
+</html>
+
+--CODI5
+
+<html>
+    <head></head>
+    <body>
+        <p id="contador">0</p>
+        <button onclick="sumar()">+1</button>
+        <button onclick="reset()">Reset</button>
+
+        <script>
+            var valor = 0;
+
+            var parraf = document.getElementById("contador");
+
+            function sumar()
+            {
+                valor = valor + 1;      
+                parraf.innerText = valor; 
+            }
+
+            function reset()
+            {
+                valor = 0;              
+
+--codi6
+<html>
+    <head></head>
+    <body>
+        <p id="text">Hola alumnes</p>
+        <button onclick="canviaColor()">Canviar color</button>
+
+        <script>
+            // Aquí el nostre codi
+            // Canviarem el color del text amb JavaScript
+
+            let text = document.getElementById("text");
+            let esVermell = false;
+
+            function canviaColor()
+            {
+                // Alternem entre vermell i negre per veure el canvi clarament
+                if (esVermell) {
+                    text.style.color = "black";
+                } else {
+                    text.style.color = "red";
+                }
+                esVermell = !esVermell;
+            }
+        </script>
+    </body>
+</html>
+
+--codi7
+<html>
+    <head></head>
+    <body>
+        <input id="num" placeholder="Escriu un número">
+        <button onclick="comprova()">Comprovar</button>
+        <p id="resultat">Resultat</p>
+
+        <script>
+            // Aquí el nostre codi
+            // Direm si el número és parell o imparell
+
+            let input = document.getElementById("num");
+            let resultat = document.getElementById("resultat");
+
+            function comprova()
+            {
+                let num = Number(input.value);
+
+                if (num % 2 == 0) {
+                    resultat.textContent = "Parell";
+                } else {
+                    resultat.textContent = "Imparell";
+                }
+            }
+        </script>
+    </body>
+</html>
+
+--codi8
+<html>
+    <head></head>
+    <body>
+        <input id="text" placeholder="Nou element">
+        <button onclick="afegir()">Afegir</button>
+
+        <ul id="llista"></ul>
+
+        <script>
+
+            function afegir()
+            {
+                var input = document.getElementById("text");
+                var llista = document.getElementById("llista");
+
+                var nouElement = document.createElement("li");
+
+                nouElement.innerText = input.value;
+
+                llista.appendChild(nouElement);
+
+                input.value = "";
+            }
+
+        </script>
+    </body>
+</html>
+
+--codi9
+<html>
+    <head></head>
+    <body>
+        <p id="missatge">Missatge secret</p>
+        <button onclick="toggle()">Mostrar / Amagar</button>
+
+        <script>
+            // Aquí el nostre codi
+            // Farem un "toggle" per mostrar o amagar un element
+
+            let missatge = document.getElementById("missatge");
+
+            function toggle()
+            {
+                if (missatge.style.display == "none") {
+                    missatge.style.display = "block";
+                } else {
+                    missatge.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>
+
+--codi10
+
+<html>
+    <head>
+        <style>
+            /* Classes CSS */
+            .destacat {
+                background-color: yellow;
+                font-weight: bold;
+            }
+
+            .amagat {
+                display: none;
+            }
+
+            .vermell {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="text">Aquest text canviarà amb classList</p>
+
+        <button onclick="toggleDestacat()">Destacat</button>
+        <button onclick="toggleVermell()">Vermell</button>
+        <button onclick="toggleAmagat()">Mostrar / Amagar</button>
+
+        <script>
+            // Aquí el nostre codi
+            // En aquesta activitat HAS d'utilitzar classList (add, remove, toggle o contains)
+
+            let text = document.getElementById("text");
+
+            function toggleDestacat()
+            {
+                text.classList.toggle("destacat");
+            }
+
+            function toggleVermell()
+            {
+                text.classList.toggle("vermell");
+            }
+
+            function toggleAmagat()
+            {
+                text.classList.toggle("amagat");
+            }
+        </script>
+    </body>
+</html>
