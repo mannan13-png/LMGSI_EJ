@@ -1,31 +1,34 @@
-
 const btn = document.getElementById("btn");
 
 btn.addEventListener("click", async () => {
+    const pokemonName = document.getElementById("input").value;
 
-  const text = document.getElementById("input").value;
+    const res = await fetch("/convertPokemon", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ data: pokemonName })
+    });
 
-  // Fem una petició HTTP al servidor (Express)
-  // fetch() envia una request al backend
-  const res = await fetch("/convert", {
-    // Tipus de petició
-    // POST = enviem dades al servidor
-    method: "POST",
-    // Capçaleres HTTP
-    // Indiquem que estem enviant dades en format JSON
-    headers: {
-      "Content-Type": "application/json"
-    },
+    const json = await res.json();
 
-    // Cos de la petició (les dades que enviem)
-    // Convertim l’objecte JS a text JSON
-    body: JSON.stringify({ data: text })
-  });
+    if (json.error) {
+        alert(json.error);
+        return;
+    }
 
-  // El servidor respon amb JSON
-  // Convertim la resposta a objecte JavaScript
-  const json = await res.json();
-  
-  // Mostrem el resultat a la textarea de sortida
-  document.getElementById("output").value = json.result;
+    document.getElementById("output").value = json.xml;
+
+
+    const oldImg = document.querySelector("img");
+    if (oldImg) oldImg.remove();
+
+    const img = document.createElement("img"); [cite: 108]
+    img.src = json.original.sprites.front_default; 
+    document.body.appendChild(img); [cite: 107]
+
+
+    const habilidades = json.original.abilities.map(a => a.ability.name).join(", ");
+    console.log("Habilitats:", habilidades);
+    
+    alert("Habilitats de " + pokemonName + ": " + habilidades);
 });
