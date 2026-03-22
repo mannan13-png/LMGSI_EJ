@@ -1,43 +1,55 @@
 const express = require("express");
+const convert = require("xml-js"); 
 
 const app = express();
 const PORT = 3000;
 
-// permet rebre JSON
 app.use(express.json());
-
-// servir fitxers estàtics (HTML, JS, CSS)
+app.use(express.text({ type: "application/xml" })); 
 app.use(express.static("public"));
 
 
-// endpoint d'exemple
-app.post("/convert", (req, res) => {
-  const { data } = req.body;
-
-  const result = data.toUpperCase(); // prova simple
-
-  res.json({ result });
+app.post("/json-to-xml", (req, res) => {
+    const json = req.body; 
+    const options = { compact: true, ignoreComment: true, spaces: 4 };
+    const result = convert.json2xml(json, options);
+    
+    res.set("Content-Type", "text/xml");
+    res.send(result);
 });
 
-//7.1 JsonToXML
-app.post("/Json-to-xml", (req, res) => {
+app.post("/xml-to-json", (req, res) => {
+    const xml = req.body;     
+    const result = convert.xml2json(xml, { compact: true, spaces: 4 });
+    
+    res.json(JSON.parse(result));
+});
 
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+});
 
+// Nueva ruta para buscar Pokémon y convertir a XML
+app.post("/convertPokemon", async (req, res) => {
+    try {
+        const name = req.body.data; 
+        
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`);
+        
+        if (!response.ok) {
+            return res.status(404).json({ error: "Pokémon no trobat" });
+        }
 
-//7.2 XMLToJson
+        const pokemonJson = await response.json(); [cite: 71]
 
-function XMLtoJson(xmlString) {
-  const parser = new DOMParser();
-  const xml = parser.parseFromString(xmlString, "text/xml");
+        const options = { compact: true, ignoreComment: true, spaces: 4 };
+        const resultXML = convert.json2xml(pokemonJson, options);
 
-  let obj = {};
-  const root = xml.documentElement;
-
-  for (let node of root.children) {
-    obj[node.nodeName] = node.textContent;
-  }
-
-  return { [root.nodeName]: obj };
-}
-
-
+        res.json({ 
+            xml: resultXML, 
+            original: pokemonJson 
+        });
+    } catch (error) {
+        res.status(500).json({ error: "Error al servidor" });
+    }
+});
